@@ -9,16 +9,16 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jiand.tinyrouter:tinyrouter-plugin:1.0.0'
+//        classpath 'com.jiand.tinyrouter:tinyrouter-plugin:1.0.0'
     }
 }
 
 allprojects {
     repositories {
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
 
 //    gradle.projectsEvaluated {

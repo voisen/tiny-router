@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jiand.tinyrouter'
+//apply plugin: 'com.jiand.tinyrouter'
 
 android {
 
@@ -36,8 +36,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     annotationProcessor project(':tinyrouter-processor')
-    implementation project(':tinyrouter-annotation')
-    implementation project(':tinyrouter')
+//    implementation 'com.github.voisen:tiny-router:v0.0.1-beta'
     implementation project(":libdemo")
+    implementation provided(":tinyrouter")
 
 }

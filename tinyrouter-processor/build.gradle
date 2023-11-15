@@ -1,8 +1,4 @@
 apply plugin: 'java-library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group = 'com.github.voisen'
-
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -15,4 +11,17 @@ dependencies {
     implementation 'com.google.auto.service:auto-service:1.0-rc4'
     annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
     implementation project(':tinyrouter-annotation')
+}
+
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        MyPlugin(MavenPublication) {
+            from components.java
+            groupId 'com.jiand.tinyrouter'
+            artifactId 'tinyrouter-processor'
+            version '1.0.0'
+        }
+    }
 }
