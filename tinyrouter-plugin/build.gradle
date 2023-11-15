@@ -1,0 +1,33 @@
+plugins {
+    id 'groovy'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenLocal()
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.4.1'
+}
+
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        MyPlugin(MavenPublication) {
+            from components.java
+            groupId 'com.jiand.tinyrouter'
+            artifactId 'tinyrouter-plugin'
+            version '1.0.0'
+        }
+    }
+}
