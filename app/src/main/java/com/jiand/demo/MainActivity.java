@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.jiand.annotation.*;
-import com.jiand.router.TinyRouter;
-import com.jiand.router.callback.ActivityResultCallback;
-import com.jiand.router.callback.NavigationResultCallback;
+import com.jiand.tinyrouter.TinyRouter;
+import com.jiand.tinyrouter.annotation.Autowired;
+import com.jiand.tinyrouter.annotation.Route;
+import com.jiand.tinyrouter.callback.ActivityResultCallback;
 
 import java.util.Date;
 

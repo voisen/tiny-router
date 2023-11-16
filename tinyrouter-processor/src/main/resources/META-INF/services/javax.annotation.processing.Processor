@@ -1,2 +1,2 @@
-com.jiand.processor.RouteProcessor
-com.jiand.processor.InterceptorProcessor
+com.jiand.tinyrouter.processor.RouteProcessor
+com.jiand.tinyrouter.processor.InterceptorProcessor

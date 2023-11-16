@@ -2,7 +2,7 @@ package com.jiand.demo;
 
 import android.app.Application;
 
-import com.jiand.router.TinyRouter;
+import com.jiand.tinyrouter.TinyRouter;
 
 public class App extends Application {
 

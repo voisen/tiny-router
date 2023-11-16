@@ -5,7 +5,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.jiand.annotation.Route;
+import com.jiand.tinyrouter.annotation.Route;
+
 
 @Route(path = "/demo/test")
 public class TestActivity extends AppCompatActivity {

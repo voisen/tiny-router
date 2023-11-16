@@ -6,7 +6,8 @@ import android.os.IBinder;
 
 import androidx.annotation.Nullable;
 
-import com.jiand.annotation.Route;
+import com.jiand.tinyrouter.annotation.Route;
+
 
 /**
  * @author jiand

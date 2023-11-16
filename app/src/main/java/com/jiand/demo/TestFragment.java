@@ -2,7 +2,7 @@ package com.jiand.demo;
 
 import androidx.fragment.app.Fragment;
 
-import com.jiand.annotation.Route;
+import com.jiand.tinyrouter.annotation.Route;
 
 /**
  * @author jiand
