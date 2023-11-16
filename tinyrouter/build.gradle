@@ -27,7 +27,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'io.github.voisen:tinyrouter-annotation:0.0.1'
+    api 'io.github.voisen:tinyrouter-annotation:0.0.2'
 }
 
 apply from: rootProject.file('publish.gradle')

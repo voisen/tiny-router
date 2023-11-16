@@ -10,7 +10,7 @@ dependencies {
     implementation "com.squareup:javapoet:1.13.0"
     implementation 'com.google.auto.service:auto-service:1.0-rc4'
     annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
-    implementation 'io.github.voisen:tinyrouter-annotation:0.0.1'
+    implementation 'io.github.voisen:tinyrouter-annotation:0.0.2'
 }
 
 

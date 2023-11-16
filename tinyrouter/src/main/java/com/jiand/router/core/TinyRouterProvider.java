@@ -135,4 +135,11 @@ public class TinyRouterProvider {
     public TinyRouteMetaInfo getRouterMetaInfo(Class<?> aClass) {
         return classRouteMap.get(aClass);
     }
+
+    public void clear() {
+        classRouteMap.clear();
+        routeMap.clear();
+        classNames.clear();
+        interceptorInfoList.clear();
+    }
 }

@@ -61,4 +61,8 @@ public class TinyRouterActivityLifecycleCallback implements Application.Activity
     public void onActivityDestroyed(Activity activity) {
         activities.remove(activity);
     }
+
+    public void clear() {
+        activities.clear();
+    }
 }

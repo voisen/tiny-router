@@ -75,8 +75,6 @@ public class TinyRouterTransform extends Transform {
         });
 
         TinyRouterInject.inject(RouterScanner.tinyRouterMapFileJar);
-
-        FileUtils.copyFile(RouterScanner.tinyRouterMapFileJar, new File("C:\\Users\\wuzhicheng\\Downloads\\" + System.currentTimeMillis() + ".jar"));
     }
 
     private void handlerFile(File inputFile) {

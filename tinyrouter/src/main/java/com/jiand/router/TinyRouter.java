@@ -27,6 +27,11 @@ public interface TinyRouter {
     void init(Application context);
 
     /**
+     * 反初始化
+     */
+    void deinit();
+
+    /**
      * 构建一个Ticket
      * @param path 路径
      * @return Ticket

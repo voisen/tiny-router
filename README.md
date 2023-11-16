@@ -1,3 +1,5 @@
+# TinyRouter
+----
 
 > 一个轻量化，便捷的Android模块化开发依赖库，使用可以使各个模块解耦，提高开发效率。
 
@@ -6,9 +8,9 @@
 
 
 #### 最新版本
-模块|tinyrouter|tinyrouter-processor|tinyrouter-plugin
----|---|---|---
-版本|0.0.1|0.0.1|0.0.1
+模块| tinyrouter | tinyrouter-processor |tinyrouter-plugin
+---|------------|----------------------|---
+版本| 0.0.2      | 0.0.2                |0.0.2
 
 
 #### 特点

@@ -41,7 +41,7 @@ public class TinyRouterImpl implements TinyRouter {
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
-    private Context mContext;
+    private Application mApplication;
 
     public static TinyRouter getInstance() {
         if (instance != null){
@@ -57,7 +57,7 @@ public class TinyRouterImpl implements TinyRouter {
 
     @Override
     public TinyRouterTicket build(String path) {
-        if (mContext == null){
+        if (mApplication == null){
             throw new RuntimeException("你需要在Application内初始化TinyRouter");
         }
         TinyRouteMetaInfo routerMetaInfo = TinyRouterProvider.getInstance().getRouterMetaInfo(path);
@@ -69,8 +69,16 @@ public class TinyRouterImpl implements TinyRouter {
 
     @Override
     public void init(Application context) {
-        mContext = context;
+        mApplication = context;
         context.registerActivityLifecycleCallbacks(TinyRouterActivityLifecycleCallback.getInstance());
+    }
+
+    @Override
+    public void deinit() {
+        mApplication.unregisterActivityLifecycleCallbacks(TinyRouterActivityLifecycleCallback.getInstance());
+        TinyRouterActivityLifecycleCallback.getInstance().clear();
+        TinyRouterProvider.getInstance().clear();
+        mApplication = null;
     }
 
     @Override
@@ -138,7 +146,7 @@ public class TinyRouterImpl implements TinyRouter {
             currentContext = TinyRouterActivityLifecycleCallback.getInstance().getTopActivity();
         }
         if (currentContext == null){
-            currentContext = mContext;
+            currentContext = mApplication;
         }
         switch (routerMetaInfo.getRouteType()){
             case ACTIVITY:

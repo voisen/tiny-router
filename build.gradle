@@ -2,7 +2,7 @@
 buildscript {
     repositories {
         maven{
-            url 'https://s01.oss.sonatype.org/content/repositories/releases/'
+            url 'https://s01.oss.sonatype.org/content/groups/staging'
         }
         mavenLocal()
         google()
@@ -11,14 +11,14 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'io.github.voisen:tinyrouter-plugin:0.0.1'
+        classpath 'io.github.voisen:tinyrouter-plugin:0.0.2'
     }
 }
 
 allprojects {
     repositories {
         maven{
-            url 'https://s01.oss.sonatype.org/content/repositories/releases/'
+            url 'https://s01.oss.sonatype.org/content/groups/staging'
         }
         mavenCentral()
         google()
