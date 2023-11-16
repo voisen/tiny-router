@@ -117,7 +117,9 @@ public class YourActivity extends AppCompatActivity {
 
 ````java
 //跳转到指定路径下的Activity
-TinyRouter.getRouter().navigation(this, "/activity/main");
+TinyRouter.getRouter().build("/activity/main").navigation();
+//or
+TinyRouter.getRouter().build("/activity/main").navigation(this);
 
 //获取指定路径下的Activity
 TinyRouter.getRouter().build("/test/to-activity")
