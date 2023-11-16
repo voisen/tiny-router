@@ -45,6 +45,23 @@ public class MainActivity extends AppCompatActivity {
                 });
         System.out.println(TinyRouter.getRouter().build("/test")
                 .navigation());
+
+        TinyRouter.getRouter().build("/test/to-activity")
+                .withFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .withAction(Intent.ACTION_VIEW)
+                .withString("time", new Date().toString())
+                .greenChannel()//绿色通道， 跳过拦截器
+                .navigation(this, new ActivityResultCallback() {
+                    @Override
+                    public void onActivityResult(int i, Intent intent) {
+                        //ToActivity通过setResult返回数据
+                        //Intent intent = new Intent();
+                        //intent.putExtra("data", "结束的回调: " + System.currentTimeMillis());
+                        //setResult(RESULT_OK, intent);
+                        Log.i(TAG, "onActivityResult: 返回的数据: " + intent);
+                    }
+                });
+
     }
 
     @Override
